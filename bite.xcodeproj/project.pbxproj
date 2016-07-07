@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72F100B527D05180211AA8C5 /* Pods_bite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533BD19F7589D7FE501C922E /* Pods_bite.framework */; };
 		E4E1BCBF1D2EC32500C29F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCBE1D2EC32500C29F1C /* AppDelegate.swift */; };
-		E4E1BCC11D2EC32500C29F1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCC01D2EC32500C29F1C /* ViewController.swift */; };
 		E4E1BCC41D2EC32500C29F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E1BCC21D2EC32500C29F1C /* Main.storyboard */; };
 		E4E1BCC61D2EC32500C29F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E1BCC51D2EC32500C29F1C /* Assets.xcassets */; };
 		E4E1BCC91D2EC32500C29F1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E1BCC71D2EC32500C29F1C /* LaunchScreen.storyboard */; };
+		E4E1BCD51D2EC50D00C29F1C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCD41D2EC50D00C29F1C /* Color.swift */; };
+		E4E1BCD71D2EC52900C29F1C /* UIColor+Hexstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */; };
+		E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCD91D2EC59A00C29F1C /* DataModel.swift */; };
+		E4E1BCDD1D2EC5BB00C29F1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		533BD19F7589D7FE501C922E /* Pods_bite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B407C6642EC09FE60B0077 /* Pods-bite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bite/Pods-bite.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E1BCBB1D2EC32500C29F1C /* bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E1BCBE1D2EC32500C29F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4E1BCC01D2EC32500C29F1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E4E1BCC31D2EC32500C29F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4E1BCC51D2EC32500C29F1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4E1BCC81D2EC32500C29F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4E1BCCA1D2EC32500C29F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4E1BCD41D2EC50D00C29F1C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hexstring.swift"; sourceTree = "<group>"; };
+		E4E1BCD91D2EC59A00C29F1C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FCCFD31F87E54603EB50E7C1 /* Pods-bite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bite.release.xcconfig"; path = "Pods/Target Support Files/Pods-bite/Pods-bite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F100B527D05180211AA8C5 /* Pods_bite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		279CCEDFFA8F8FD8F130506A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				533BD19F7589D7FE501C922E /* Pods_bite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F9C6BBAF51C8CC664E2805D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95B407C6642EC09FE60B0077 /* Pods-bite.debug.xcconfig */,
+				FCCFD31F87E54603EB50E7C1 /* Pods-bite.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E4E1BCB21D2EC32500C29F1C = {
 			isa = PBXGroup;
 			children = (
 				E4E1BCBD1D2EC32500C29F1C /* bite */,
 				E4E1BCBC1D2EC32500C29F1C /* Products */,
+				4F9C6BBAF51C8CC664E2805D /* Pods */,
+				279CCEDFFA8F8FD8F130506A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +84,65 @@
 		E4E1BCBD1D2EC32500C29F1C /* bite */ = {
 			isa = PBXGroup;
 			children = (
+				E4E1BCD31D2EC4F100C29F1C /* config */,
+				E4E1BCD11D2EC4D400C29F1C /* datamodel */,
+				E4E1BCD01D2EC4BA00C29F1C /* viewcontrollers */,
+				E4E1BCD21D2EC4E200C29F1C /* utils */,
 				E4E1BCBE1D2EC32500C29F1C /* AppDelegate.swift */,
-				E4E1BCC01D2EC32500C29F1C /* ViewController.swift */,
 				E4E1BCC21D2EC32500C29F1C /* Main.storyboard */,
 				E4E1BCC51D2EC32500C29F1C /* Assets.xcassets */,
 				E4E1BCC71D2EC32500C29F1C /* LaunchScreen.storyboard */,
 				E4E1BCCA1D2EC32500C29F1C /* Info.plist */,
 			);
 			path = bite;
+			sourceTree = "<group>";
+		};
+		E4E1BCD01D2EC4BA00C29F1C /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				E4E1BCDB1D2EC5AC00C29F1C /* login */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		E4E1BCD11D2EC4D400C29F1C /* datamodel */ = {
+			isa = PBXGroup;
+			children = (
+				E4E1BCD81D2EC58800C29F1C /* model */,
+				E4E1BCD91D2EC59A00C29F1C /* DataModel.swift */,
+			);
+			path = datamodel;
+			sourceTree = "<group>";
+		};
+		E4E1BCD21D2EC4E200C29F1C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		E4E1BCD31D2EC4F100C29F1C /* config */ = {
+			isa = PBXGroup;
+			children = (
+				E4E1BCD41D2EC50D00C29F1C /* Color.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		E4E1BCD81D2EC58800C29F1C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E4E1BCDB1D2EC5AC00C29F1C /* login */ = {
+			isa = PBXGroup;
+			children = (
+				E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4E1BCCD1D2EC32500C29F1C /* Build configuration list for PBXNativeTarget "bite" */;
 			buildPhases = (
+				CD6B6C45D3309112F32093B1 /* [CP] Check Pods Manifest.lock */,
 				E4E1BCB71D2EC32500C29F1C /* Sources */,
 				E4E1BCB81D2EC32500C29F1C /* Frameworks */,
 				E4E1BCB91D2EC32500C29F1C /* Resources */,
+				B2C59B9BB23810736F2CCE43 /* [CP] Embed Pods Frameworks */,
+				8371F2C200C704C97B752350 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +214,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8371F2C200C704C97B752350 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bite/Pods-bite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2C59B9BB23810736F2CCE43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bite/Pods-bite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD6B6C45D3309112F32093B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E4E1BCB71D2EC32500C29F1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4E1BCC11D2EC32500C29F1C /* ViewController.swift in Sources */,
 				E4E1BCBF1D2EC32500C29F1C /* AppDelegate.swift in Sources */,
+				E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */,
+				E4E1BCD71D2EC52900C29F1C /* UIColor+Hexstring.swift in Sources */,
+				E4E1BCDD1D2EC5BB00C29F1C /* LoginViewController.swift in Sources */,
+				E4E1BCD51D2EC50D00C29F1C /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +382,7 @@
 		};
 		E4E1BCCE1D2EC32500C29F1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95B407C6642EC09FE60B0077 /* Pods-bite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = bite/Info.plist;
@@ -258,6 +394,7 @@
 		};
 		E4E1BCCF1D2EC32500C29F1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCCFD31F87E54603EB50E7C1 /* Pods-bite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = bite/Info.plist;
@@ -286,6 +423,7 @@
 				E4E1BCCF1D2EC32500C29F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
