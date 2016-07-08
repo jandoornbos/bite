@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		72F100B527D05180211AA8C5 /* Pods_bite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533BD19F7589D7FE501C922E /* Pods_bite.framework */; };
+		E40A5B5D1D3048BC00E4C38A /* BiteRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5B5C1D3048BC00E4C38A /* BiteRevealViewController.swift */; };
+		E40A5B601D30493400E4C38A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5B5F1D30493400E4C38A /* MenuViewController.swift */; };
+		E40A5B631D30498200E4C38A /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5B621D30498200E4C38A /* ProductViewController.swift */; };
+		E40A5B661D3049F600E4C38A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5B651D3049F600E4C38A /* OrderViewController.swift */; };
+		E40A5B681D304A8700E4C38A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5B671D304A8700E4C38A /* Style.swift */; };
 		E4E1BCBF1D2EC32500C29F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCBE1D2EC32500C29F1C /* AppDelegate.swift */; };
 		E4E1BCC41D2EC32500C29F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E1BCC21D2EC32500C29F1C /* Main.storyboard */; };
 		E4E1BCC61D2EC32500C29F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E1BCC51D2EC32500C29F1C /* Assets.xcassets */; };
@@ -21,6 +26,11 @@
 /* Begin PBXFileReference section */
 		533BD19F7589D7FE501C922E /* Pods_bite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B407C6642EC09FE60B0077 /* Pods-bite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bite/Pods-bite.debug.xcconfig"; sourceTree = "<group>"; };
+		E40A5B5C1D3048BC00E4C38A /* BiteRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiteRevealViewController.swift; sourceTree = "<group>"; };
+		E40A5B5F1D30493400E4C38A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E40A5B621D30498200E4C38A /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		E40A5B651D3049F600E4C38A /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		E40A5B671D304A8700E4C38A /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		E4E1BCBB1D2EC32500C29F1C /* bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E1BCBE1D2EC32500C29F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4E1BCC31D2EC32500C29F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +73,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E40A5B5E1D30492000E4C38A /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				E40A5B5F1D30493400E4C38A /* MenuViewController.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		E40A5B611D30496D00E4C38A /* product */ = {
+			isa = PBXGroup;
+			children = (
+				E40A5B621D30498200E4C38A /* ProductViewController.swift */,
+			);
+			path = product;
+			sourceTree = "<group>";
+		};
+		E40A5B641D3049D700E4C38A /* order */ = {
+			isa = PBXGroup;
+			children = (
+				E40A5B651D3049F600E4C38A /* OrderViewController.swift */,
+			);
+			path = order;
+			sourceTree = "<group>";
+		};
 		E4E1BCB21D2EC32500C29F1C = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +134,11 @@
 		E4E1BCD01D2EC4BA00C29F1C /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				E40A5B5E1D30492000E4C38A /* menu */,
 				E4E1BCDB1D2EC5AC00C29F1C /* login */,
+				E40A5B611D30496D00E4C38A /* product */,
+				E40A5B641D3049D700E4C38A /* order */,
+				E40A5B5C1D3048BC00E4C38A /* BiteRevealViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -126,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E1BCD41D2EC50D00C29F1C /* Color.swift */,
+				E40A5B671D304A8700E4C38A /* Style.swift */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -268,10 +307,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E1BCBF1D2EC32500C29F1C /* AppDelegate.swift in Sources */,
+				E40A5B5D1D3048BC00E4C38A /* BiteRevealViewController.swift in Sources */,
 				E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */,
+				E40A5B601D30493400E4C38A /* MenuViewController.swift in Sources */,
 				E4E1BCD71D2EC52900C29F1C /* UIColor+Hexstring.swift in Sources */,
 				E4E1BCDD1D2EC5BB00C29F1C /* LoginViewController.swift in Sources */,
+				E40A5B631D30498200E4C38A /* ProductViewController.swift in Sources */,
 				E4E1BCD51D2EC50D00C29F1C /* Color.swift in Sources */,
+				E40A5B661D3049F600E4C38A /* OrderViewController.swift in Sources */,
+				E40A5B681D304A8700E4C38A /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,19 @@ import UIKit
 class Color {
     
     class func red() -> UIColor {
-        return UIColor(rgba: "ec373d")
+        return UIColor(rgba: "#ec373d")
+    }
+    
+    class func gray() -> UIColor {
+        return UIColor(rgba: "#363e4d")
+    }
+    
+    class func blue() -> UIColor {
+        return UIColor(rgba: "#50a7db")
+    }
+    
+    class func white() -> UIColor {
+        return UIColor.whiteColor()
     }
 
 }
