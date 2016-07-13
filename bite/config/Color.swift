@@ -22,6 +22,10 @@ class Color {
         return UIColor(rgba: "#50a7db")
     }
     
+    class func yellow() -> UIColor {
+        return UIColor(rgba: "#f69931")
+    }
+    
     class func white() -> UIColor {
         return UIColor.whiteColor()
     }
