@@ -119,9 +119,103 @@
                     <view key="view" contentMode="scaleToFill" id="b2u-r5-8LP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger_and_soda" translatesAutoresizingMaskIntoConstraints="NO" id="VKP-Lf-xCa">
+                                <rect key="frame" x="310" y="400" width="290" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Y9E-fc-oh1"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mAV-A8-4nO">
+                                <rect key="frame" x="360" y="0.0" width="240" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8Ke-xA-Uez"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="orderCell" id="uxf-8o-I8R" customClass="OrderCell" customModule="bite" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uxf-8o-I8R" id="kGr-vp-Md6">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broodje kroket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyh-uw-IxF">
+                                                    <rect key="frame" x="0.0" y="10" width="240" height="27.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 2,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzj-zO-tht">
+                                                    <rect key="frame" x="150" y="31" width="74" height="34.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eod-dN-ixE">
+                                                    <rect key="frame" x="0.0" y="69" width="224" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="AAT-Io-kuG"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 x €1,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9U-bq-gBC">
+                                                    <rect key="frame" x="92" y="44" width="50" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kyh-uw-IxF" firstAttribute="top" secondItem="kGr-vp-Md6" secondAttribute="top" constant="10" id="9vu-oE-P1W"/>
+                                                <constraint firstItem="Kyh-uw-IxF" firstAttribute="leading" secondItem="kGr-vp-Md6" secondAttribute="leading" id="Aa7-JU-h70"/>
+                                                <constraint firstItem="eod-dN-ixE" firstAttribute="leading" secondItem="kGr-vp-Md6" secondAttribute="leading" id="BxF-aE-fcA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kyh-uw-IxF" secondAttribute="trailing" id="O2M-8D-tN2"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qzj-zO-tht" secondAttribute="bottom" constant="4" id="Rws-eN-NF0"/>
+                                                <constraint firstItem="Qzj-zO-tht" firstAttribute="leading" secondItem="A9U-bq-gBC" secondAttribute="trailing" constant="8" id="ZUw-qc-JhB"/>
+                                                <constraint firstAttribute="trailing" secondItem="eod-dN-ixE" secondAttribute="trailing" constant="16" id="bap-iU-F5w"/>
+                                                <constraint firstAttribute="bottom" secondItem="eod-dN-ixE" secondAttribute="bottom" id="h2R-Ia-0y2"/>
+                                                <constraint firstItem="A9U-bq-gBC" firstAttribute="baseline" secondItem="Qzj-zO-tht" secondAttribute="baseline" id="nId-c9-hcB"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qzj-zO-tht" secondAttribute="trailing" constant="16" id="waJ-EG-uwY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="productTitleLabel" destination="Kyh-uw-IxF" id="VHU-Zv-8rx"/>
+                                            <outlet property="seperator" destination="eod-dN-ixE" id="k3x-AZ-a8j"/>
+                                            <outlet property="singlePriceLabel" destination="A9U-bq-gBC" id="1Nc-cb-RZY"/>
+                                            <outlet property="totalPriceLabel" destination="Qzj-zO-tht" id="LhC-7G-Vjv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="J9M-2L-bsQ" id="UXo-c9-01O"/>
+                                    <outlet property="delegate" destination="J9M-2L-bsQ" id="WKS-dE-IfG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.31372549019607843" green="0.65490196078431373" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LQN-ed-tQq" firstAttribute="top" secondItem="mAV-A8-4nO" secondAttribute="bottom" id="AFk-df-OqZ"/>
+                            <constraint firstItem="mAV-A8-4nO" firstAttribute="top" secondItem="b2u-r5-8LP" secondAttribute="top" id="EXu-US-ORI"/>
+                            <constraint firstItem="LQN-ed-tQq" firstAttribute="top" secondItem="VKP-Lf-xCa" secondAttribute="bottom" id="Jjm-Bb-FS9"/>
+                            <constraint firstItem="mAV-A8-4nO" firstAttribute="top" secondItem="T6W-bk-qyp" secondAttribute="bottom" id="SJM-b8-ImX"/>
+                            <constraint firstAttribute="trailing" secondItem="VKP-Lf-xCa" secondAttribute="trailing" id="T6y-bA-Gd3"/>
+                            <constraint firstAttribute="trailing" secondItem="mAV-A8-4nO" secondAttribute="trailing" id="VLi-ys-6jz"/>
+                            <constraint firstItem="VKP-Lf-xCa" firstAttribute="width" secondItem="mAV-A8-4nO" secondAttribute="width" constant="50" id="jdk-SV-ZdL"/>
+                            <constraint firstItem="mAV-A8-4nO" firstAttribute="leading" secondItem="b2u-r5-8LP" secondAttribute="leading" id="zcD-co-fTR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SJM-b8-ImX"/>
+                                <exclude reference="zcD-co-fTR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Je bestelling" id="wrF-0j-6Uh"/>
+                    <connections>
+                        <outlet property="tableView" destination="mAV-A8-4nO" id="PF3-7q-akH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Js-2Z-GRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,5 +240,6 @@
     </scenes>
     <resources>
         <image name="background" width="375" height="667"/>
+        <image name="burger_and_soda" width="328" height="242"/>
     </resources>
 </document>

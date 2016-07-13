@@ -21,6 +21,8 @@
 		E4E1BCD71D2EC52900C29F1C /* UIColor+Hexstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */; };
 		E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCD91D2EC59A00C29F1C /* DataModel.swift */; };
 		E4E1BCDD1D2EC5BB00C29F1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */; };
+		E4FBBACB1D35466A00638D71 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FBBACA1D35466A00638D71 /* OrderCell.swift */; };
+		E4FBBACD1D35471700638D71 /* UIView+Hairline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hexstring.swift"; sourceTree = "<group>"; };
 		E4E1BCD91D2EC59A00C29F1C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E4FBBACA1D35466A00638D71 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Hairline.swift"; sourceTree = "<group>"; };
 		FCCFD31F87E54603EB50E7C1 /* Pods-bite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bite.release.xcconfig"; path = "Pods/Target Support Files/Pods-bite/Pods-bite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +96,7 @@
 		E40A5B641D3049D700E4C38A /* order */ = {
 			isa = PBXGroup;
 			children = (
+				E4FBBAC91D35464100638D71 /* cells */,
 				E40A5B651D3049F600E4C38A /* OrderViewController.swift */,
 			);
 			path = order;
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */,
+				E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -182,6 +188,14 @@
 				E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		E4FBBAC91D35464100638D71 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				E4FBBACA1D35466A00638D71 /* OrderCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E1BCBF1D2EC32500C29F1C /* AppDelegate.swift in Sources */,
+				E4FBBACB1D35466A00638D71 /* OrderCell.swift in Sources */,
 				E40A5B5D1D3048BC00E4C38A /* BiteRevealViewController.swift in Sources */,
 				E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */,
+				E4FBBACD1D35471700638D71 /* UIView+Hairline.swift in Sources */,
 				E40A5B601D30493400E4C38A /* MenuViewController.swift in Sources */,
 				E4E1BCD71D2EC52900C29F1C /* UIColor+Hexstring.swift in Sources */,
 				E4E1BCDD1D2EC5BB00C29F1C /* LoginViewController.swift in Sources */,
