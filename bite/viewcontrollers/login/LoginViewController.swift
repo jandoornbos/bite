@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import CoreMotion
 
 class LoginViewController: UIViewController {
 
+    // MARK: Interface Builder Outlets
+    @IBOutlet weak var redCircle: UIView!
+    @IBOutlet weak var burgerImageView: UIImageView!
+    @IBOutlet weak var shakeImageView: UIImageView!
+    @IBOutlet weak var biteLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    // MARK: Properties
+    var animator: UIDynamicAnimator!
+    var motionManager: CMMotionManager!
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -18,6 +30,38 @@ class LoginViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - Easter Eggs
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            self.startMotion()
+        }
+    }
+    
+    func startMotion() {
+        let views: [UIView] = [ self.burgerImageView, self.shakeImageView ]
+        self.animator = UIDynamicAnimator(referenceView: self.redCircle)
+        let gravity = UIGravityBehavior(items: views)
+        let collision = UICollisionBehavior(items: views)
+        collision.translatesReferenceBoundsIntoBoundary = true
+        collision.collisionMode = .Everything
+        let bumperPath = UIBezierPath(ovalInRect: self.redCircle.bounds)
+        collision.addBoundaryWithIdentifier("bumper", forPath: bumperPath)
+        let elasticy = UIDynamicItemBehavior(items: views)
+        elasticy.elasticity = 0.5
+        self.animator.addBehavior(elasticy)
+        self.animator.addBehavior(gravity)
+        self.animator.addBehavior(collision)
+        self.motionManager = CMMotionManager()
+        self.motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (motion, error) in
+            if let motionGravity = motion {
+                dispatch_async(dispatch_get_main_queue(), { 
+                    gravity.gravityDirection = CGVectorMake(CGFloat(motionGravity.gravity.x), -CGFloat(motionGravity.gravity.y))
+                })
+            }
+        }
     }
 
 }

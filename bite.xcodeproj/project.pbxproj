@@ -23,6 +23,7 @@
 		E4E1BCDD1D2EC5BB00C29F1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */; };
 		E4FBBACB1D35466A00638D71 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FBBACA1D35466A00638D71 /* OrderCell.swift */; };
 		E4FBBACD1D35471700638D71 /* UIView+Hairline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */; };
+		E4FBBACF1D36CE8D00638D71 /* RoundCollisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FBBACE1D36CE8D00638D71 /* RoundCollisionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4FBBACA1D35466A00638D71 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Hairline.swift"; sourceTree = "<group>"; };
+		E4FBBACE1D36CE8D00638D71 /* RoundCollisionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCollisionView.swift; sourceTree = "<group>"; };
 		FCCFD31F87E54603EB50E7C1 /* Pods-bite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bite.release.xcconfig"; path = "Pods/Target Support Files/Pods-bite/Pods-bite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 			children = (
 				E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */,
 				E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */,
+				E4FBBACE1D36CE8D00638D71 /* RoundCollisionView.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -233,6 +236,8 @@
 				TargetAttributes = {
 					E4E1BCBA1D2EC32500C29F1C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = YQ62CYT4B3;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -322,6 +327,7 @@
 			files = (
 				E4E1BCBF1D2EC32500C29F1C /* AppDelegate.swift in Sources */,
 				E4FBBACB1D35466A00638D71 /* OrderCell.swift in Sources */,
+				E4FBBACF1D36CE8D00638D71 /* RoundCollisionView.swift in Sources */,
 				E40A5B5D1D3048BC00E4C38A /* BiteRevealViewController.swift in Sources */,
 				E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */,
 				E4FBBACD1D35471700638D71 /* UIView+Hairline.swift in Sources */,
@@ -445,10 +451,13 @@
 			baseConfigurationReference = 95B407C6642EC09FE60B0077 /* Pods-bite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = bite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.move4mobile.bite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ae0c4a88-b7c5-4ca1-83cb-5de37a93c276";
+				PROVISIONING_PROFILE_SPECIFIER = "YQ62CYT4B3/M4M iOS Development Profile 20160707";
 			};
 			name = Debug;
 		};
@@ -457,6 +466,7 @@
 			baseConfigurationReference = FCCFD31F87E54603EB50E7C1 /* Pods-bite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = bite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.move4mobile.bite;

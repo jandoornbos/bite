@@ -27,7 +27,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6I-mu-bXh">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="537.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMv-O6-yzw">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMv-O6-yzw" customClass="RoundCollisionView" customModule="bite" customModuleProvider="target">
                                                 <rect key="frame" x="225" y="50" width="150" height="150"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="Aix-ih-lhF">
@@ -225,6 +225,13 @@
                             <constraint firstItem="DoY-nx-Uhl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dzS-eS-L2G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="biteLabel" destination="OxG-xB-FfG" id="xqv-Pn-ned"/>
+                        <outlet property="burgerImageView" destination="Aix-ih-lhF" id="uTg-x1-piu"/>
+                        <outlet property="loginButton" destination="70a-qU-993" id="PBf-bL-TLM"/>
+                        <outlet property="redCircle" destination="aMv-O6-yzw" id="9AT-gC-GWQ"/>
+                        <outlet property="shakeImageView" destination="a8r-lI-aBE" id="o0i-dI-QGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
