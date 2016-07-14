@@ -13,6 +13,8 @@
 		E40A5B631D30498200E4C38A /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5B621D30498200E4C38A /* ProductViewController.swift */; };
 		E40A5B661D3049F600E4C38A /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5B651D3049F600E4C38A /* OrderViewController.swift */; };
 		E40A5B681D304A8700E4C38A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A5B671D304A8700E4C38A /* Style.swift */; };
+		E47527E31D37DF1300C30F85 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47527E21D37DF1200C30F85 /* ProductCell.swift */; };
+		E47527E51D37DF5500C30F85 /* BiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47527E41D37DF5500C30F85 /* BiteViewController.swift */; };
 		E4E1BCBF1D2EC32500C29F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCBE1D2EC32500C29F1C /* AppDelegate.swift */; };
 		E4E1BCC41D2EC32500C29F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E1BCC21D2EC32500C29F1C /* Main.storyboard */; };
 		E4E1BCC61D2EC32500C29F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E1BCC51D2EC32500C29F1C /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		E40A5B621D30498200E4C38A /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		E40A5B651D3049F600E4C38A /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		E40A5B671D304A8700E4C38A /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		E47527E21D37DF1200C30F85 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		E47527E41D37DF5500C30F85 /* BiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiteViewController.swift; sourceTree = "<group>"; };
 		E4E1BCBB1D2EC32500C29F1C /* bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E1BCBE1D2EC32500C29F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4E1BCC31D2EC32500C29F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		E40A5B611D30496D00E4C38A /* product */ = {
 			isa = PBXGroup;
 			children = (
+				E47527E11D37DEF200C30F85 /* cells */,
 				E40A5B621D30498200E4C38A /* ProductViewController.swift */,
 			);
 			path = product;
@@ -102,6 +107,14 @@
 				E40A5B651D3049F600E4C38A /* OrderViewController.swift */,
 			);
 			path = order;
+			sourceTree = "<group>";
+		};
+		E47527E11D37DEF200C30F85 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				E47527E21D37DF1200C30F85 /* ProductCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		E4E1BCB21D2EC32500C29F1C = {
@@ -146,6 +159,7 @@
 				E40A5B611D30496D00E4C38A /* product */,
 				E40A5B641D3049D700E4C38A /* order */,
 				E40A5B5C1D3048BC00E4C38A /* BiteRevealViewController.swift */,
+				E47527E41D37DF5500C30F85 /* BiteViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -330,6 +344,7 @@
 				E4FBBACF1D36CE8D00638D71 /* RoundCollisionView.swift in Sources */,
 				E40A5B5D1D3048BC00E4C38A /* BiteRevealViewController.swift in Sources */,
 				E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */,
+				E47527E31D37DF1300C30F85 /* ProductCell.swift in Sources */,
 				E4FBBACD1D35471700638D71 /* UIView+Hairline.swift in Sources */,
 				E40A5B601D30493400E4C38A /* MenuViewController.swift in Sources */,
 				E4E1BCD71D2EC52900C29F1C /* UIColor+Hexstring.swift in Sources */,
@@ -338,6 +353,7 @@
 				E4E1BCD51D2EC50D00C29F1C /* Color.swift in Sources */,
 				E40A5B661D3049F600E4C38A /* OrderViewController.swift in Sources */,
 				E40A5B681D304A8700E4C38A /* Style.swift in Sources */,
+				E47527E51D37DF5500C30F85 /* BiteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
