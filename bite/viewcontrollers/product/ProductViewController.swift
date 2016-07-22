@@ -9,7 +9,7 @@
 import UIKit
 import SWRevealViewController
 
-class ProductViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ProductCellDelegate {
+class ProductViewController: BiteViewController, UITableViewDataSource, UITableViewDelegate, ProductCellDelegate {
 
     // MARK: Interface Builder Outlets
     @IBOutlet weak var tableView: UITableView!

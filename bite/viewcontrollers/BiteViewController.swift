@@ -11,9 +11,14 @@ import SWRevealViewController
 
 class BiteViewController: UIViewController {
 
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        self.navigationController?.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        let barButton = UIBarButtonItem(image: UIImage(named: "hamburger_icon"), style: .Plain, target: self.revealViewController(), action: #selector(BiteRevealViewController.revealToggle(_:)))
+        self.navigationItem.leftBarButtonItem = barButton
     }
 
     override func didReceiveMemoryWarning() {
