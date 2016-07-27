@@ -19,6 +19,9 @@ class BiteViewController: UIViewController {
         self.navigationController?.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         let barButton = UIBarButtonItem(image: UIImage(named: "hamburger_icon"), style: .Plain, target: self.revealViewController(), action: #selector(BiteRevealViewController.revealToggle(_:)))
         self.navigationItem.leftBarButtonItem = barButton
+        
+        let shoppingButton = UIBarButtonItem(image: UIImage(named: "shopping_cart"), style: .Plain, target: self.revealViewController(), action: #selector(BiteRevealViewController.rightRevealToggle(_:)))
+        self.navigationItem.rightBarButtonItem = shoppingButton
     }
 
     override func didReceiveMemoryWarning() {
