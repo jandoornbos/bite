@@ -451,11 +451,21 @@
                                     <outlet property="delegate" destination="kcH-Zl-u0A" id="jvR-5e-9pF"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xi4-lt-h6Y">
+                                <rect key="frame" x="450" y="450" width="170" height="170"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="85"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Txc-Rc-pfE">
                                 <rect key="frame" x="460" y="460" width="150" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basket" translatesAutoresizingMaskIntoConstraints="NO" id="mRQ-ly-Vkk">
-                                        <rect key="frame" x="22.5" y="23" width="105" height="104"/>
+                                        <rect key="frame" x="22" y="23" width="105" height="104"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.59999999999999998" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
@@ -475,16 +485,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xi4-lt-h6Y" firstAttribute="trailing" secondItem="Txc-Rc-pfE" secondAttribute="trailing" constant="10" id="7Rg-xi-TF8"/>
                             <constraint firstItem="dJW-xK-APv" firstAttribute="top" secondItem="Txc-Rc-pfE" secondAttribute="bottom" constant="-10" id="7fw-KC-kMp"/>
                             <constraint firstItem="Tyh-Xi-H1o" firstAttribute="top" secondItem="U14-Px-jTX" secondAttribute="top" id="C99-83-Doe"/>
+                            <constraint firstItem="Xi4-lt-h6Y" firstAttribute="bottom" secondItem="Txc-Rc-pfE" secondAttribute="bottom" constant="10" id="DQx-2h-vPy"/>
                             <constraint firstItem="Tyh-Xi-H1o" firstAttribute="leading" secondItem="U14-Px-jTX" secondAttribute="leading" id="XzJ-HP-n8b"/>
                             <constraint firstAttribute="trailing" secondItem="Tyh-Xi-H1o" secondAttribute="trailing" id="awy-Ej-6a1"/>
+                            <constraint firstItem="Xi4-lt-h6Y" firstAttribute="leading" secondItem="Txc-Rc-pfE" secondAttribute="leading" constant="-10" id="b3Y-hr-Xjy"/>
                             <constraint firstAttribute="trailing" secondItem="Txc-Rc-pfE" secondAttribute="trailing" constant="-10" id="bSk-ej-Dkp"/>
+                            <constraint firstItem="Xi4-lt-h6Y" firstAttribute="top" secondItem="Txc-Rc-pfE" secondAttribute="top" constant="-10" id="c3g-Yq-Mt9"/>
                             <constraint firstItem="dJW-xK-APv" firstAttribute="top" secondItem="Tyh-Xi-H1o" secondAttribute="bottom" id="lSo-oe-MQl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Producten" id="ZO7-Kc-u2o"/>
                     <connections>
+                        <outlet property="basketBorder" destination="Xi4-lt-h6Y" id="uST-9J-vQZ"/>
                         <outlet property="basketHitPoint" destination="Txc-Rc-pfE" id="d1u-9U-0Dy"/>
                         <outlet property="tableView" destination="Tyh-Xi-H1o" id="Ivo-Ek-zqI"/>
                     </connections>

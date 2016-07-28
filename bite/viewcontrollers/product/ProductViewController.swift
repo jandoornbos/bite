@@ -14,9 +14,11 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
     // MARK: Interface Builder Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var basketHitPoint: UIView!
+    @IBOutlet weak var basketBorder: UIView!
     
     // MARK: Properties
     var productInBasket: Bool = false
+    var basketShowing: Bool = false
     var movingImageView: UIImageView?
     
     var animator: UIDynamicAnimator!
@@ -33,6 +35,11 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
         self.hideBasket(false)
         self.addAnimator()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.addBasketBorder()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,19 +53,37 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
     }
     
     func hideBasket(animated: Bool) {
+        self.basketShowing = false
         if animated {
-            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: [], animations: { 
+            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: [], animations: {
                 self.basketHitPoint.transform = CGAffineTransformMakeTranslation(150, 0)
-            }, completion: nil)
+                self.basketBorder.transform = CGAffineTransformMakeScale(0.1, 0.1)
+            }, completion: { finished in
+                self.basketBorder.hidden = true
+                self.basketBorder.layer.removeAllAnimations()
+            })
         } else {
             self.basketHitPoint.transform = CGAffineTransformMakeTranslation(150, 0)
+            self.basketBorder.transform = CGAffineTransformMakeScale(0.1, 0.1)
+            self.basketBorder.hidden = true
+            self.basketBorder.layer.removeAllAnimations()
         }
     }
     
     func showBasket() {
+        self.basketShowing = true
+        self.basketBorder.hidden = false
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: [], animations: { 
             self.basketHitPoint.transform = CGAffineTransformIdentity
-        }, completion: nil)
+        }, completion: { finished in
+            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: [], animations: { 
+                self.basketBorder.transform = CGAffineTransformIdentity
+            }, completion: { finished2 in
+                UIView.animateWithDuration(3.0, delay: 0, options: [ .Repeat ], animations: {
+                    self.basketBorder.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+                }, completion: nil)
+            })
+        })
     }
     
     func addAttachmentBehaviour(point: CGPoint, startPoint: CGPoint) {
@@ -81,6 +106,18 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
         self.animator.removeAllBehaviors()
         self.tableView.scrollEnabled = true
         self.tableView.userInteractionEnabled = true
+    }
+    
+    func addBasketBorder() {
+        let border = CAShapeLayer()
+        border.strokeColor = Color.yellow().CGColor
+        border.fillColor = nil
+        border.lineDashPattern = [ 10, 20 ]
+        border.lineWidth = 5.0
+        self.basketBorder.layer.addSublayer(border)
+        
+        border.path = UIBezierPath(roundedRect: self.basketBorder.bounds, cornerRadius: 85.0).CGPath
+        border.frame = self.basketBorder.bounds
     }
     
     // MARK: - UITableView DataSource & UITableView Delegate
@@ -142,7 +179,9 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
     }
     
     func productCellAddButtonPressed(imageView: UIImageView, startPoint: CGPoint, sender: ProductCell) {
-        self.showBasket()
+        if !self.basketShowing {
+            self.showBasket()
+        }
         let temporaryImageView = UIImageView(image: imageView.image)
         temporaryImageView.frame = sender.productImageView.frame
         temporaryImageView.contentMode = sender.productImageView.contentMode
