@@ -28,6 +28,7 @@ class BiteRevealViewController: SWRevealViewController {
     
     func setupRevealViewController() {
         self.rearViewRevealWidth = 120.0
+        self.frontViewShadowOpacity = 0.3
     }
 
 }
