@@ -76,7 +76,7 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
     // MARK: - UITableView DataSource & UITableView Delegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return 20
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
