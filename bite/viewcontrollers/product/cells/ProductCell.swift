@@ -13,6 +13,8 @@ protocol ProductCellDelegate {
     func productCellGetSuperview() -> UIView
     func productCellImageLocationChanged(point: CGPoint, sender: ProductCell)
     func productCellPanGestureEnded(sender: ProductCell)
+    
+    func productCellAddButtonPressed(imageView: UIImageView, startPoint: CGPoint, sender: ProductCell)
 }
 
 class ProductCell: UITableViewCell {
@@ -74,5 +76,12 @@ class ProductCell: UITableViewCell {
             self.productImageView.alpha = 1.0
         })
     }
+    
+    // MARK: - Interface Builder Outlets
 
+    @IBAction func addButtonPressed(sender: UIButton) {
+        let startPoint = self.delegate!.productCellGetSuperview().convertPoint(self.productImageView.center, fromView: self)
+        self.delegate?.productCellAddButtonPressed(self.productImageView, startPoint: startPoint, sender: self)
+    }
+    
 }

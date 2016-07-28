@@ -24,6 +24,8 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
     
     var startPoint: CGPoint!
     
+    var currentAnimationCount: Int = 0
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -73,6 +75,14 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
         }
     }
     
+    func removeMovingImage() {
+        self.movingImageView?.removeFromSuperview()
+        self.movingImageView = nil
+        self.animator.removeAllBehaviors()
+        self.tableView.scrollEnabled = true
+        self.tableView.userInteractionEnabled = true
+    }
+    
     // MARK: - UITableView DataSource & UITableView Delegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,7 +120,7 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
         self.attachmentBehaviour.anchorPoint = point
         if CGRectContainsPoint(self.basketHitPoint.frame, point) {
             self.productInBasket = true
-            self.basketHitPoint.backgroundColor = UIColor.greenColor()
+            self.basketHitPoint.backgroundColor = Color.gray()
         } else {
             self.productInBasket = false
             self.basketHitPoint.backgroundColor = Color.yellow()
@@ -131,12 +141,63 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
         self.productInBasket = false
     }
     
-    func removeMovingImage() {
-        self.movingImageView?.removeFromSuperview()
-        self.movingImageView = nil
-        self.animator.removeAllBehaviors()
-        self.tableView.scrollEnabled = true
-        self.tableView.userInteractionEnabled = true
+    func productCellAddButtonPressed(imageView: UIImageView, startPoint: CGPoint, sender: ProductCell) {
+        self.showBasket()
+        let temporaryImageView = UIImageView(image: imageView.image)
+        temporaryImageView.frame = sender.productImageView.frame
+        temporaryImageView.contentMode = sender.productImageView.contentMode
+        temporaryImageView.center = startPoint
+        
+        let imageFrame = temporaryImageView.frame
+        
+        var viewOrigin = temporaryImageView.frame.origin
+        viewOrigin.y = viewOrigin.y + temporaryImageView.frame.size.height / 2.0
+        viewOrigin.x = viewOrigin.x + temporaryImageView.frame.size.width / 2.0
+        
+        temporaryImageView.layer.position = viewOrigin
+        self.view.insertSubview(temporaryImageView, belowSubview: self.basketHitPoint)
+        
+        let resizeAnimation = CABasicAnimation(keyPath: "bounds.size")
+        resizeAnimation.toValue = NSValue(CGSize: CGSizeMake(60.0, imageFrame.size.height * (60.0 / imageFrame.size.width)))
+        resizeAnimation.fillMode = kCAFillModeForwards
+        resizeAnimation.removedOnCompletion = false
+        
+        let pathAnimation = CAKeyframeAnimation(keyPath: "position")
+        pathAnimation.calculationMode = kCAAnimationPaced
+        pathAnimation.fillMode = kCAFillModeForwards
+        pathAnimation.removedOnCompletion = false
+        
+        let endPoint = self.basketHitPoint.center
+        let curvedPath = CGPathCreateMutable()
+        CGPathMoveToPoint(curvedPath, nil, viewOrigin.x, viewOrigin.y)
+        CGPathAddCurveToPoint(curvedPath, nil, endPoint.x, viewOrigin.y, endPoint.x, viewOrigin.y, endPoint.x, endPoint.y)
+        pathAnimation.path = curvedPath
+        
+        let group = CAAnimationGroup()
+        group.fillMode = kCAFillModeForwards
+        group.removedOnCompletion = false
+        group.animations = [ resizeAnimation, pathAnimation ]
+        group.duration = 0.8
+        group.delegate = self
+        group.setValue(temporaryImageView, forKey: "imageViewBeingAnimated")
+        
+        temporaryImageView.layer.addAnimation(group, forKey: "shopProductAnimation")
+        self.currentAnimationCount += 1
+    }
+    
+    // MARK: - Animation Group Delegate
+    
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+        if flag {
+            self.currentAnimationCount -= 1
+            let imageView = anim.valueForKey("imageViewBeingAnimated") as? UIImageView
+            if let imageView = imageView {
+                imageView.removeFromSuperview()
+            }
+            if self.currentAnimationCount == 0 {
+                self.hideBasket(true)
+            }
+        }
     }
 
 }
