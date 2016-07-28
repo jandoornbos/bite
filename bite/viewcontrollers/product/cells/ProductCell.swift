@@ -31,36 +31,41 @@ class ProductCell: UITableViewCell {
     var startCenter: CGPoint!
     var productCenter: CGPoint!
     
-    var panGesture: UIPanGestureRecognizer!
+    var longPressGesture: UILongPressGestureRecognizer!
     
     var pointInView: CGPoint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(_:)))
-        self.panGesture.delegate = self
-        self.productImageView.addGestureRecognizer(self.panGesture)
+        self.longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handlePan(_:)))
+        self.longPressGesture.delegate = self
+        self.longPressGesture.minimumPressDuration = 0.0
+        self.productImageView.addGestureRecognizer(self.longPressGesture)
         self.productCenter = self.productImageView.center
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func handlePan(sender: UIPanGestureRecognizer) {
-        if sender.state == .Began {
+    func handlePan(sender: UILongPressGestureRecognizer) {
+        switch sender.state {
+        case .Began:
             if let view = sender.view as? UIImageView {
                 let pointInView = sender.locationInView(sender.view)
                 let startPoint = self.delegate!.productCellGetSuperview().convertPoint(self.productImageView.center, fromView: self)
                 self.delegate?.productCellPanGestureBegan(view, pointInView: pointInView, startPoint: startPoint, sender: self)
             }
-        } else if sender.state == .Changed {
+        case .Changed:
             let anchor = sender.locationInView(self.delegate!.productCellGetSuperview())
             self.delegate?.productCellImageLocationChanged(anchor, sender: self)
             self.productImageView.alpha = 0
-        } else if sender.state == .Ended {
+        case .Ended, .Failed, .Cancelled:
             self.delegate?.productCellPanGestureEnded(self)
             NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(self.putImageBack), userInfo: nil, repeats: false)
+        default:
+            break
         }
     }
     

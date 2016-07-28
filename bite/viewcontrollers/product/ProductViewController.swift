@@ -89,6 +89,7 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
     
     func productCellPanGestureBegan(imageView: UIImageView, pointInView: CGPoint, startPoint: CGPoint, sender: ProductCell) {
         self.tableView.scrollEnabled = false
+        self.tableView.userInteractionEnabled = false
         self.movingImageView = UIImageView(image: sender.productImageView.image)
         self.movingImageView?.frame = sender.productImageView.frame
         self.movingImageView?.contentMode = sender.productImageView.contentMode
@@ -135,6 +136,7 @@ class ProductViewController: BiteViewController, UITableViewDataSource, UITableV
         self.movingImageView = nil
         self.animator.removeAllBehaviors()
         self.tableView.scrollEnabled = true
+        self.tableView.userInteractionEnabled = true
     }
 
 }

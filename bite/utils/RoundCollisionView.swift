@@ -10,6 +10,7 @@ import UIKit
 
 class RoundCollisionView: UIView {
 
+    @available(iOS 9.0, *)
     override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
         return .Ellipse
     }
