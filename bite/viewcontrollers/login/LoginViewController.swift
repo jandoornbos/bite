@@ -10,6 +10,8 @@ import UIKit
 import CoreMotion
 
 class LoginViewController: UIViewController {
+    
+    static let storyboardIdentifier: String = "loginViewController"
 
     // MARK: Interface Builder Outlets
     @IBOutlet weak var redCircle: UIView!
@@ -17,6 +19,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var shakeImageView: UIImageView!
     @IBOutlet weak var biteLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     // MARK: Properties
     var animator: UIDynamicAnimator!
@@ -30,6 +34,31 @@ class LoginViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - Interface Builder Actions
+    
+    @IBAction func loginButtonPressed(sender: UIButton) {
+        let username = self.usernameTextField.text
+        let password = self.passwordTextField.text
+        if let username = username, password = password {
+            DataModel.sharedInstance.login(username, password: password, result: { (status) in
+                if status == .Success {
+                    self.openRevealController()
+                }
+            })
+        } else {
+            // Invalid credentials
+        }
+    }
+    
+    // MARK: - Navigation
+    
+    func openRevealController() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewControllerWithIdentifier(BiteRevealViewController.storyboardIdentifier)
+        let delegate = (UIApplication.sharedApplication().delegate) as! AppDelegate
+        delegate.switchRootViewController(vc, animated: true, completion: nil)
     }
     
     // MARK: - Easter Eggs

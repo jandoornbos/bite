@@ -24,6 +24,15 @@
 		E4E1BCD71D2EC52900C29F1C /* UIColor+Hexstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */; };
 		E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCD91D2EC59A00C29F1C /* DataModel.swift */; };
 		E4E1BCDD1D2EC5BB00C29F1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */; };
+		E4F765C31D4BA80A006E4254 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765C21D4BA80A006E4254 /* LoginResponse.swift */; };
+		E4F765C51D4BA8A5006E4254 /* AuthorisationAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765C41D4BA8A5006E4254 /* AuthorisationAPIManager.swift */; };
+		E4F765C71D4BA8B2006E4254 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765C61D4BA8B2006E4254 /* Config.swift */; };
+		E4F765C91D4E202C006E4254 /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765C81D4E202C006E4254 /* OAuthManager.swift */; };
+		E4F765CC1D4E2120006E4254 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765CB1D4E2120006E4254 /* Keychain.swift */; };
+		E4F765CE1D4E2150006E4254 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765CD1D4E2150006E4254 /* Preferences.swift */; };
+		E4F765D01D4E24A1006E4254 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765CF1D4E24A1006E4254 /* APIManager.swift */; };
+		E4F765D21D4E289A006E4254 /* NSData+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765D11D4E289A006E4254 /* NSData+String.swift */; };
+		E4F765D41D4E2A7C006E4254 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F765D31D4E2A7C006E4254 /* Store.swift */; };
 		E4FBBACB1D35466A00638D71 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FBBACA1D35466A00638D71 /* OrderCell.swift */; };
 		E4FBBACD1D35471700638D71 /* UIView+Hairline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */; };
 		E4FBBACF1D36CE8D00638D71 /* RoundCollisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FBBACE1D36CE8D00638D71 /* RoundCollisionView.swift */; };
@@ -50,6 +59,15 @@
 		E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hexstring.swift"; sourceTree = "<group>"; };
 		E4E1BCD91D2EC59A00C29F1C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E4F765C21D4BA80A006E4254 /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		E4F765C41D4BA8A5006E4254 /* AuthorisationAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorisationAPIManager.swift; sourceTree = "<group>"; };
+		E4F765C61D4BA8B2006E4254 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E4F765C81D4E202C006E4254 /* OAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
+		E4F765CB1D4E2120006E4254 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		E4F765CD1D4E2150006E4254 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		E4F765CF1D4E24A1006E4254 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E4F765D11D4E289A006E4254 /* NSData+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+String.swift"; sourceTree = "<group>"; };
+		E4F765D31D4E2A7C006E4254 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E4FBBACA1D35466A00638D71 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Hairline.swift"; sourceTree = "<group>"; };
 		E4FBBACE1D36CE8D00638D71 /* RoundCollisionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCollisionView.swift; sourceTree = "<group>"; };
@@ -150,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E1BCD31D2EC4F100C29F1C /* config */,
+				E4F765CA1D4E2107006E4254 /* preferences */,
 				E4E1BCD11D2EC4D400C29F1C /* datamodel */,
 				E4E1BCD01D2EC4BA00C29F1C /* viewcontrollers */,
 				E4E1BCD21D2EC4E200C29F1C /* utils */,
@@ -179,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E1BCD81D2EC58800C29F1C /* model */,
+				E4F765C01D4BA7D3006E4254 /* network */,
 				E4E1BCD91D2EC59A00C29F1C /* DataModel.swift */,
 			);
 			path = datamodel;
@@ -190,6 +210,7 @@
 				E4E1BCD61D2EC52900C29F1C /* UIColor+Hexstring.swift */,
 				E4FBBACC1D35471700638D71 /* UIView+Hairline.swift */,
 				E4FBBACE1D36CE8D00638D71 /* RoundCollisionView.swift */,
+				E4F765D11D4E289A006E4254 /* NSData+String.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -199,6 +220,7 @@
 			children = (
 				E4E1BCD41D2EC50D00C29F1C /* Color.swift */,
 				E40A5B671D304A8700E4C38A /* Style.swift */,
+				E4F765C61D4BA8B2006E4254 /* Config.swift */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -206,6 +228,7 @@
 		E4E1BCD81D2EC58800C29F1C /* model */ = {
 			isa = PBXGroup;
 			children = (
+				E4F765D31D4E2A7C006E4254 /* Store.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -216,6 +239,34 @@
 				E4E1BCDC1D2EC5BB00C29F1C /* LoginViewController.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		E4F765C01D4BA7D3006E4254 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				E4F765C11D4BA7DB006E4254 /* model */,
+				E4F765CF1D4E24A1006E4254 /* APIManager.swift */,
+				E4F765C41D4BA8A5006E4254 /* AuthorisationAPIManager.swift */,
+				E4F765C81D4E202C006E4254 /* OAuthManager.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		E4F765C11D4BA7DB006E4254 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E4F765C21D4BA80A006E4254 /* LoginResponse.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E4F765CA1D4E2107006E4254 /* preferences */ = {
+			isa = PBXGroup;
+			children = (
+				E4F765CB1D4E2120006E4254 /* Keychain.swift */,
+				E4F765CD1D4E2150006E4254 /* Preferences.swift */,
+			);
+			path = preferences;
 			sourceTree = "<group>";
 		};
 		E4FBBAC91D35464100638D71 /* cells */ = {
@@ -354,6 +405,9 @@
 				E4FBBACB1D35466A00638D71 /* OrderCell.swift in Sources */,
 				E4FBBACF1D36CE8D00638D71 /* RoundCollisionView.swift in Sources */,
 				E40A5B5D1D3048BC00E4C38A /* BiteRevealViewController.swift in Sources */,
+				E4F765C71D4BA8B2006E4254 /* Config.swift in Sources */,
+				E4F765D41D4E2A7C006E4254 /* Store.swift in Sources */,
+				E4F765C91D4E202C006E4254 /* OAuthManager.swift in Sources */,
 				E4E1BCDA1D2EC59A00C29F1C /* DataModel.swift in Sources */,
 				E47527E31D37DF1300C30F85 /* ProductCell.swift in Sources */,
 				E4FBBACD1D35471700638D71 /* UIView+Hairline.swift in Sources */,
@@ -362,10 +416,16 @@
 				E4E1BCDD1D2EC5BB00C29F1C /* LoginViewController.swift in Sources */,
 				E40A5B631D30498200E4C38A /* ProductViewController.swift in Sources */,
 				E4E1BCD51D2EC50D00C29F1C /* Color.swift in Sources */,
+				E4F765C51D4BA8A5006E4254 /* AuthorisationAPIManager.swift in Sources */,
 				E40A5B661D3049F600E4C38A /* OrderViewController.swift in Sources */,
 				E40A5B681D304A8700E4C38A /* Style.swift in Sources */,
 				E4C91A091D426C5B00201CE3 /* MenuCell.swift in Sources */,
+				E4F765CE1D4E2150006E4254 /* Preferences.swift in Sources */,
+				E4F765D21D4E289A006E4254 /* NSData+String.swift in Sources */,
+				E4F765C31D4BA80A006E4254 /* LoginResponse.swift in Sources */,
+				E4F765D01D4E24A1006E4254 /* APIManager.swift in Sources */,
 				E47527E51D37DF5500C30F85 /* BiteViewController.swift in Sources */,
+				E4F765CC1D4E2120006E4254 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
